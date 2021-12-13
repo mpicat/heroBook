@@ -10,7 +10,7 @@ body, html {
 }
 
 /* page d'accueil */
-.accueil {
+#accueil {
     position: relative;
     height: 100%;
 }
@@ -31,7 +31,7 @@ body, html {
     height: 100%;
 }
 
-.intro {
+#intro {
     position : absolute;
     bottom: 5%;
     left: 12px;
@@ -51,4 +51,92 @@ a, a:active, a:visited {
 input, input:focus {
     border: 2px solid #555;
     outline: none;
+}
+/* caractéristiques */
+.hero {
+    width: 80px;
+    float: left;
+    margin: 10px 0 0 10px;
+    border: solid 2px #555;
+}
+
+#gemicon {
+    width: 80px;
+    float: right;
+    margin: 10px 10px 0 0;
+
+}
+.caracimg::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+#name {
+    float: left;
+    margin: 10px 0 0 10px;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+#magic {
+    float: right;
+    margin: 10px 35px 0 0;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.caractxt::after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+/* histoire */
+#game {
+    /* changer display en none pour la vraie version */
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+.story {
+    margin: 20px 10px 10px 10px;
+}
+
+.text {
+    border: 0.5px #555 solid;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 10px;
+    background-image: url(Images/fontPapier.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* choix */
+.choices button {
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: left;
+    background-color: black;
+    border: gray 1px solid;
+    border-radius: 6px;
+    color: white;
+    padding: 5px;
+}
+.skill {
+    display: flex;
+    justify-content: space-between;
+}
+.skill button {
+    width: 30%;
+    padding: 5px;
+    background-image: linear-gradient(rgb(143, 8, 8), rgb(206, 22, 22), rgb(143, 8, 8));
+    border: gray 1px solid;
+    border-radius: 3px;
+    color: white;
+}
+
+/* boutton restart */
+.reStart {
+    display: block;
+    margin: auto;
 }
