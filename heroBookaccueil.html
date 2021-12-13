@@ -23,32 +23,48 @@
         </div>
 
         <div id="game">
-            <div class="caracimg">
-                <img class="hero" src="Images/Prisoner_male.webp" alt="image de prisonnier homme">
-                <img style="display: none;" id="gemicon" src="Images/redmagic.png" alt="icône catalyseur">
+            <div id="carac">
+                <div class="caracimg">
+                    <img class="hero" src="Images/Prisoner_male.webp" alt="image de prisonnier homme">
+                    <img style="display: none;" id="gemicon" src="Images/redmagic.png" alt="icône catalyseur">
+                </div>
+                <div class="caractxt">
+                    <p id="name"></p>
+                    <p style="display: none;" id="magic"><span id="quantitymagic"></span>/5</p>
+                </div>
             </div>
-            <div class="caractxt">
-                <p id="name"></p>
-                <p style="display: none;" id="magic"><span id="quantitymagic"></span>/5</p>
-            </div>
-
             <div class="story">
-                <div id="text1" class="text">
-                    <h2>1er Texte</h2>
-                    <p>Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, </p>
+                <div id="part1">
+                    <div class="text">
+                        <h2>Le cachot</h2>
+                        <p>Vous vous réveillez difficilement sur le sol d'une pièce sombre. Après quelques coup d'oeil en panique, vous remarquez que vous vous trouvez dans une sorte de chambre aux murs de pierre vides. Vous entendez des bruits de pas derrière la porte, puis celle-ci s'ouvre.</p><br>
+                        <p>Un homme petit et fin vêtu d'une cape noire apparaît dans l'encadrement de la porte.</p><br>
+                        <p>"Il a l'air frais notre petit moldu!" dit-il en ricanant d'un air vicieux.</p>
+                    </div>
+                    <button class="choice" onclick="choice2()">Qu'est ce qu'il se passe? Ou suis-je ?</button>
+                    <button class="choice" onclick="choice3()">Se taire</button>
                 </div>
-                <div class="choices">
-                    <button>Option 1</button>
-                    <button>Option 1</button>
+                
+                <div id="part2" style="display: none;">
+                    <div class="text">
+                        <h2>Le choix</h2>
+                        <p>Bonsoir <span id="nameGame"></span>, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, </p>
+                    </div>
+                    <button class="choice" onclick="choice4()">Option 1</button>
+                    <button class="choice" onclick="choice5()">Option 2</button>
                 </div>
-                <div class="skill" style="display: none;">
-                    <button>Skill 1</button>
-                    <button>Skill 2</button>
-                    <button>Skill 3</button>
+                
+                <div id="part3" style="display: none;">
+                    <div class="text">
+                        <h2>La fuite</h2>
+                        <p>Hola <span id="nameGame"></span>, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, </p>
+                    </div>
+                    <button class="choice" onclick="choice6()">Option 1</button>
+                    <button class="choice" onclick="choice7()">Option 2</button>
                 </div>
+
             </div>
-            
-            <button class="reStart" onclick="restart()">Sortir</button>
+            <button id="reStart" onclick="restart()">Sortir</button>
             <!-- song -->
             <div class="song" style="display: none;">
                 <audio id="introSong" controls loop>
@@ -66,16 +82,26 @@
               document.getElementById("intro").style.display = "none";
               document.getElementById("game").style.display = "block";
               document.getElementById("name").innerHTML = document.getElementById("nameP").value;
+              document.getElementById("nameGame").innerHTML = document.getElementById("nameP").value;
               x.play();
           }
-          
 
-          function restart() {
-              document.getElementById("intro").style.display = "block";
-              document.getElementById("game").style.display = "none";
-              document.getElementById("name").innerHTML = document.getElementById("nameP").value;
-              x.pause();
-          }
+            function restart() {
+                document.getElementById("intro").style.display = "block";
+                document.getElementById("game").style.display = "none";
+                document.getElementById("name").innerHTML = document.getElementById("nameP").value;
+                x.pause();
+            }
+
+            function choice2() {
+                document.getElementById("part1").style.display = "none";
+                document.getElementById("part2").style.display = "block";
+            }
+
+            function choice3() {
+                document.getElementById("part1").style.display = "none";
+                document.getElementById("part3").style.display = "block";
+            }
         </script>
     </body>
 </html>

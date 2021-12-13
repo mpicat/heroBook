@@ -92,7 +92,7 @@ input, input:focus {
 /* histoire */
 #game {
     /* changer display en none pour la vraie version */
-    display: block;
+    display: none;
     position: relative;
     z-index: 2;
 }
@@ -112,7 +112,7 @@ input, input:focus {
 }
 
 /* choix */
-.choices button {
+.choice {
     width: 100%;
     margin-bottom: 5px;
     text-align: left;
@@ -135,8 +135,7 @@ input, input:focus {
     color: white;
 }
 
-/* boutton restart */
-.reStart {
+#reStart {
     display: block;
     margin: auto;
 }
