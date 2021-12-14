@@ -2,25 +2,19 @@
     box-sizing: border-box;
     margin: 0;
     font-size: 100%;
-    font-family: 'Special Elite';
+    font-family: 'Special Elite', 'Verdana';
 }
 
 body, html {
     height: 100%;
-}
-
-/* page d'accueil */
-#accueil {
-    position: relative;
-    height: 100%;
-}
-.imgintro {
     background-image: url(Images/reducedhorrorMansion.webp);
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+/* page d'accueil */
 .fond {
     position: absolute;
     bottom: 0;
@@ -30,28 +24,25 @@ body, html {
     width: 100%;
     height: 100%;
 }
-
 #intro {
     position : absolute;
     bottom: 5%;
     left: 12px;
     font-size: 1.2em;
 }
-
 h1 {
     font-size: 3em;
     margin-bottom: 20px;
 }
-
 a, a:active, a:visited {
     text-decoration: none;
     color: black;
 }
-
 input, input:focus {
     border: 2px solid #555;
     outline: none;
 }
+
 /* caractéristiques */
 .hero {
     width: 80px;
@@ -59,12 +50,11 @@ input, input:focus {
     margin: 10px 0 0 10px;
     border: solid 2px #555;
 }
-
 #gemicon {
     width: 80px;
     float: right;
     margin: 10px 10px 0 0;
-
+    display: none;
 }
 .caracimg::after {
     display: table;
@@ -82,6 +72,7 @@ input, input:focus {
     margin: 10px 35px 0 0;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    display: none;
 }
 .caractxt::after {
     display: table;
@@ -94,10 +85,12 @@ input, input:focus {
     /* changer display en none pour la vraie version */
     display: none;
     position: relative;
-    z-index: 2;
 }
+
 .story {
+    position: relative;
     margin: 20px 10px 10px 10px;
+    z-index: 2;
 }
 
 .text {
@@ -105,10 +98,22 @@ input, input:focus {
     border-radius: 6px;
     padding: 20px;
     margin-bottom: 10px;
-    background-image: url(Images/fontPapier.jpg);
+    background-image: url(Images/reducedfontPapier.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+#reStart {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background-color: white;
+    border: gray 1px solid;
+    border-radius: 6px;
+    color: black;
+    padding: 5px;
+    width: 100px;
 }
 
 /* choix */
@@ -122,6 +127,8 @@ input, input:focus {
     color: white;
     padding: 5px;
 }
+
+/* capacités */
 .skill {
     display: flex;
     justify-content: space-between;
@@ -135,7 +142,7 @@ input, input:focus {
     color: white;
 }
 
-#reStart {
-    display: block;
-    margin: auto;
+/* sons */
+.song {
+    display: none;
 }

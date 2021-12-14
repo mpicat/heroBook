@@ -8,11 +8,10 @@
         <meta name="viewport" content="width=width-device, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet"> 
     </head>
+
     <body>
         <div id="accueil">
-            <div class="imgintro">
-                <div class="fond"></div>
-            <div>
+            <div class="fond"></div>
 
             <div id="intro">
                 <h1>L'Expérience</h1>
@@ -25,14 +24,16 @@
         <div id="game">
             <div id="carac">
                 <div class="caracimg">
-                    <img class="hero" src="Images/Prisoner_male.webp" alt="image de prisonnier homme">
-                    <img style="display: none;" id="gemicon" src="Images/redmagic.png" alt="icône catalyseur">
+                    <img class="hero" src="Images/Prisoner_male.webp" alt="Image de prisonnier homme">
+                    <img id="gemicon" src="Images/redmagic.png" alt="Icône catalyseur">
                 </div>
+
                 <div class="caractxt">
                     <p id="name"></p>
-                    <p style="display: none;" id="magic"><span id="quantitymagic"></span>/5</p>
+                    <p id="magic"><span id="quantitymagic"></span>/5</p>
                 </div>
             </div>
+
             <div class="story">
                 <div id="part1">
                     <div class="text">
@@ -41,32 +42,50 @@
                         <p>Un homme petit et fin vêtu d'une cape noire apparaît dans l'encadrement de la porte.</p><br>
                         <p>"Il a l'air frais notre petit moldu!" dit-il en ricanant d'un air vicieux.</p>
                     </div>
-                    <button class="choice" onclick="choice2()">Qu'est ce qu'il se passe? Ou suis-je ?</button>
-                    <button class="choice" onclick="choice3()">Tais-toi <span id="nameGame"></span>...</button>
+                    <button class="choice" onclick="choice1_2()">Qu'est ce qu'il se passe? Ou suis-je ?</button>
+                    <button class="choice" onclick="choice1_3()">Tais-toi <span id="nameGame"></span>...</button>
                 </div>
-                
+
                 <div id="part2" style="display: none;">
                     <div class="text">
                         <h2>Le choix</h2>
-                        <p>Bonsoir <span id="nameGame"></span>, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, </p>
+                        <p>Vous vous réveillez difficilement sur le sol d'une pièce sombre. Après quelques coup d'oeil en panique, vous remarquez que vous vous trouvez dans une sorte de chambre aux murs de pierre vides. Vous entendez des bruits de pas derrière la porte, puis celle-ci s'ouvre.</p><br>
+                        <p>Un homme petit et fin vêtu d'une cape noire apparaît dans l'encadrement de la porte.</p><br>
+                        <p>"Il a l'air frais notre petit moldu!" dit-il en ricanant d'un air vicieux.</p>
                     </div>
-                    <button class="choice" onclick="choice4()">Option 1</button>
-                    <button class="choice" onclick="choice5()">Option 2</button>
+                    <button class="choice" onclick="choice2_4()">Qu'est ce qu'il se passe? Ou suis-je ?</button>
+                    <button class="choice" onclick="choice2_5()">Tais-toi <span id="nameGame"></span>...</button>
                 </div>
-                
+
                 <div id="part3" style="display: none;">
                     <div class="text">
                         <h2>La fuite</h2>
-                        <p>Hola <span id="nameGame"></span>, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, Bonjour, </p>
+                        <p>Vous vous réveillez difficilement sur le sol d'une pièce sombre. Après quelques coup d'oeil en panique, vous remarquez que vous vous trouvez dans une sorte de chambre aux murs de pierre vides. Vous entendez des bruits de pas derrière la porte, puis celle-ci s'ouvre.</p><br>
+                        <p>Un homme petit et fin vêtu d'une cape noire apparaît dans l'encadrement de la porte.</p><br>
+                        <p>"Il a l'air frais notre petit moldu!" dit-il en ricanant d'un air vicieux.</p>
                     </div>
-                    <button class="choice" onclick="choice6()">Option 1</button>
-                    <button class="choice" onclick="choice7()">Option 2</button>
+                    <button class="choice" onclick="choice3_6()">Qu'est ce qu'il se passe? Ou suis-je ?</button>
+                    <button class="choice" onclick="choice3_7()">Tais-toi <span id="nameGame"></span>...</button>
                 </div>
 
+                <div id="part4" style="display: none;">
+                    <div class="text">
+                        <h2>La fuite</h2>
+                        <p>Vous vous réveillez difficilement sur le sol d'une pièce sombre. Après quelques coup d'oeil en panique, vous remarquez que vous vous trouvez dans une sorte de chambre aux murs de pierre vides. Vous entendez des bruits de pas derrière la porte, puis celle-ci s'ouvre.</p><br>
+                        <p>Un homme petit et fin vêtu d'une cape noire apparaît dans l'encadrement de la porte.</p><br>
+                        <p>"Il a l'air frais notre petit moldu!" dit-il en ricanant d'un air vicieux.</p>
+                    </div>
+                    <button class="choice" onclick="choice6()">Qu'est ce qu'il se passe? Ou suis-je ?</button>
+                    <button class="choice" onclick="choice7()">Tais-toi <span id="nameGame"></span>...</button>
+                </div>
+
+
             </div>
-            <button id="reStart" onclick="restart()">Sortir</button>
+
+            <a id="reStart" href="heroBookaccueil.html">Accueil</a>
+
             <!-- song -->
-            <div class="song" style="display: none;">
+            <div class="song">
                 <audio id="introSong" controls loop>
                     <source src="Sons/introsong.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
@@ -74,34 +93,39 @@
 
             </div>
         </div>
-        <!-- commencer jeu -->
+
         <script>
-            var x = document.getElementById("introSong");
+            // Commencer le jeu
 
             function play() {
               document.getElementById("intro").style.display = "none";
               document.getElementById("game").style.display = "block";
               document.getElementById("name").innerHTML = document.getElementById("nameP").value;
               document.getElementById("nameGame").innerHTML = document.getElementById("nameP").value;
-              x.play();
-          }
-
-            function restart() {
-                document.getElementById("intro").style.display = "block";
-                document.getElementById("game").style.display = "none";
-                document.getElementById("name").innerHTML = document.getElementById("nameP").value;
-                x.pause();
+              introSong.play();
             }
 
-            function choice2() {
+            // Choix
+            function choice1_2() {
                 document.getElementById("part1").style.display = "none";
                 document.getElementById("part2").style.display = "block";
             }
 
-            function choice3() {
+            function choice1_3() {
                 document.getElementById("part1").style.display = "none";
                 document.getElementById("part3").style.display = "block";
             }
+
+            function choice2_4() {
+                document.getElementById("part2").style.display = "none";
+                document.getElementById("part4").style.display = "block";
+            }
+
+            function choice2_5() {
+                document.getElementById("part2").style.display = "none";
+                document.getElementById("part5").style.display = "block";
+            }
+            
         </script>
     </body>
 </html>
