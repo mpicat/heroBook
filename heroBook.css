@@ -72,7 +72,7 @@ input, input:focus {
     margin: 10px 28px 0 0;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    display: none;
+    display: inline;
 }
 .caractxt::after {
     display: table;
@@ -83,7 +83,7 @@ input, input:focus {
 /* histoire */
 #game {
     /* changer display en none pour la vraie version */
-    display: block;
+    display: none;
     position: relative;
 }
 
