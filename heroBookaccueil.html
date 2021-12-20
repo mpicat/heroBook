@@ -17,8 +17,10 @@
                 <h1>La Mission</h1>
                 <label for="nameP">Nom de l'agent :</label>
                 <input id="nameP" maxlength="10">
-                <button onclick="playBoy()">Homme</button>
-                <button onclick="playGirl()">Femme</button>
+                <div class="gender">
+                    <button onclick="playBoy()">Homme</button>
+                    <button onclick="playGirl()">Femme</button>
+                </div>
             </div>
         </div>
 
@@ -26,25 +28,24 @@
             <div id="carac">
                 <div class="caracimg">
                     <img id="heroBoy" class="hero" src="Images/reducedAgentBoy.webp" alt="Image d'agent du FBI homme">
-                    <img id="heroGirl" class="hero" src="Images/reducedAgentGirl.webp" alt="Image d'agent du FBI homme" style="display: none;">
+                    <img id="heroGirl" class="hero" src="Images/reducedAgentGirl.webp" alt="Image d'agent du FBI femme" style="display: none;">
                     <img id="gemicon" src="Images/redmagic.png" alt="Icône gemme rouge">
                 </div>
 
                 <div class="caractxt">
                     <p id="name"></p>
-                    <p id="magic"></p>
                 </div>
             </div>
 
-            <div class="story">
+            <div id="story">
                 <div id="part0">
                     <div class="text">
-                        <h2>5 Spell street</h2>
+                        <h2>La maison</h2>
                         <p>-"Le chef t'a dit quelque chose de plus à propos de ce terroriste, Carter ?"</p><br>
-                        <p>-"Non, juste ce que tu sais <span id="nameGame"></span>. C'est un type d'une cinquantaine d'année qui serait mouillé dans des histoires d'enlèvements et d'attentats... Le chef a seulement dit de ne lui parler sous aucun prétexte, d'être le plus discret possible et de le neutraliser au plus vite."</span></p><br>
-                        <p>-"5 Spell street, on est arrivés. Cette maison me fout la trouille <span class="nameGame"></span>!"</p><br>
-                        <p>Vous et votre coéquipier faites maintenant face à une ancienne maison aux allures de maison hantée. La petite bâtisse en pierres grises vous donne un sentiment de nausée qui s'intensifie à chaque pas dans sa direction.</p><br>
-                        <p>-"Viens <span class="nameGame"></span> ! Le chef m'a donné le plan. Il semblerait qu'il y ait une petite fenêtre ouverte sur le côté."</p><br>
+                        <p>-"Non, juste ce que tu sais PLAYERNAME. C'est un type d'une cinquantaine d'année qui serait mouillé dans des histoires louches... Il a seulement précisé de ne lui parler sous aucun prétexte et de le neutraliser au plus vite."</p><br>
+                        <p>-"5 Spell street, on est arrivés. Cette maison me fout la trouille !"</p><br>
+                        <p>Vous et votre coéquipier faites maintenant face à une ancienne maison aux allures de maison hantée. La nausée que vous procure la petite bâtisse en pierres grises s'intensifie à chaque pas dans sa direction.</p><br>
+                        <p>-"Viens PLAYERNAME ! Le chef m'a donné le plan. Il semblerait qu'il y ait une petite fenêtre ouverte sur le côté."</p><br>
                         <p>Vous entrez sans bruit.</p>
                     </div>
                     <button class="choice" onclick="choice0_1()">Continuer</button>
@@ -53,19 +54,19 @@
                 <div id="part1" style="display: none;">
                     <div class="text">
                         <h2>Le salon</h2>
-                        <p>vous retrouvez dans ce qui semble être le salon. La pièce est plongée dans la pénombre.</p><br>
+                        <p>Vous retrouvez dans ce qui semble être le salon. La pièce est plongée dans la pénombre.</p><br>
                         <p>Vous entendez des bruits de pas à l'étage.</p>
                     </div>
                     <button class="choice" onclick="choice1_2()">Explorer le rez-de-chaussée</button>
-                    <button class="choice" onclick="choice1_12()">Monter à l'étage</button>
+                    <button class="choice" onclick="choice1_12()">Aller à l'étage</button>
                 </div>
 
                 <div id="part2" style="display: none;">
                     <div class="text">
                         <h2>Le rez de chaussée</h2>
-                        <p>Après un rapide coup d'oeil autour de vous, vous remarquez qu'il y a deux portes et un escalier.</p><br>
+                        <p>Après un rapide coup d'oeil autour de vous, vous remarquez deux portes et un escalier.</p><br>
                         <p>D'après le plan, la porte de droite donne accès à la chambre principale, et la porte de gauche donne accès à une autre petite chambre.</p><br>
-                        <p>-"<span class="nameGame"></span>, tu préfères commencer par quelle chambre ?"</p>
+                        <p>-"PLAYERNAME, t'as une préférence ?"</p>
                     </div>
                     <button class="choice" onclick="choice2_3()">Commencer par la chambre principale</button>
                     <button class="choice" onclick="choice2_6()">Commencer par la petite chambre</button>
@@ -96,8 +97,8 @@
                     <div class="text">
                         <h2>Le choix</h2>
                         <p>Vous essayez de toucher la gemme mais Carter vous retient le bras.</p><br>
-                        <p>-"Arrête <span class="nameGame"></span>! On est pas des voleurs ! On a une mission je te rappelle."</p><br>
-                        <p>Vous sentez une attirance pour la gemme et entendez à peine les avertissements de Carter. Il vous faut cette gemme, une sensation de puissance émane d'elle et visiblement votre coéquipier ne la ressent pas.</p>
+                        <p>-"Arrête PLAYERNAME! On est pas venu ici pour ça !"</p><br>
+                        <p>Vous sentez une attirance pour la gemme et entendez à peine les avertissements de votre coéquipier. Il vous faut cette gemme, une sensation de puissance émane d'elle et il semblerait que Carter ne la ressente pas.</p>
                     </div>
                     <button class="choice" onclick="choice4_5()">Forcer, et prendre la gemme</button>
                     <button class="choice" onclick="choice4_1()">Résister et retourner au salon</button>
@@ -106,13 +107,12 @@
                 <div id="part5" style="display: none;">
                     <div class="text">
                         <h2>La gemme</h2>
-                        <p>Malgré les paroles de Carter, vous le repoussez et vous emparez de la gemme.</p><br>
-                        <p>Celle-ci rougoie à votre contact et la vision d'un homme petit et fin vous traverse l'esprit. Vous reconnaîssez le visage de l'homme que vous recherchez : Léonard.</p><br>
-                        <p>Vous restez sans voix, un étrange frisson parcourt le long de votre corps.</p><br>
-                        <p>-"Qu'est ce qui t'as pris <span class="nameGame"></span> ? T'es malade! C'est pour ça que plus personne veut faire équipe avec toi..."</p><br>
-                        <p>-"Désolé Carter, je sais pas ce qui m'a pris..."</p><br>
-                        <p>Lorsque votre regard croise le sien, il semble s'appaiser immédiatement.</p><br>
-                        <p>-"Allez on continue, visiblement il n'est pas ici."</p>
+                        <p>Malgré les paroles de Carter, vous le repoussez et vous emparez de la gemme. Celle-ci rougoie à votre contact et la vision d'un homme petit et fin traverse votre esprit. Vous reconnaîssez le visage de l'homme que vous recherchez : Léonard.</p><br>
+                        <p>Vous frissonnez et restez sans voix.</p><br>
+                        <p>-"Qu'est ce qui t'as pris PLAYERNAME ? T'es malade!"</p><br>
+                        <p>-"Désolé Carter, c'était plus fort que moi, comme si..."</p><br>
+                        <p>Lorsque votre regard croise le sien, il semble s'appaiser immédiatement, ou est-ce de la soumission ?</p><br>
+                        <p>-"On continue, le gars n'est pas ici."</p>
                     </div>
                     <button class="choice" onclick="choice5_1()">Retourner au salon</button>
                 </div>
@@ -121,10 +121,10 @@
                     <div class="text">
                         <h2>La petite chambre</h2>
                         <p>Vous ouvrez délicatement la porte de la petite chambre.</p><br>
-                        <p>Votre regard parcourt les murs au fur et à mesure que la porte s'entrebaille.</p><br>
-                        <p>-"Putin, t'as vu ces traces aux murs ? On dirait des griffures ! Qu'est ce qu'il se passe ici ?"</p><br>
+                        <p>Vous parcourez les murs du regard au fur et à mesure que la porte s'entrebaille.</p><br>
+                        <p>-"Putin, t'as vu ces traces aux murs ? On dirait des griffures !"</p><br>
                         <p>Le visage de Carter blêmit d'un coup lorsque ses yeux se posent sur la créature au milieu de la pièce.</p><br>
-                        <p>-"C'EST QUOI ÇA ?"</p><br>
+                        <p>-"C'EST... C'EST QUOI ÇA ?"</p><br>
                         <p>Une créature mi-femme, mi-louve se retourne et vous regarde tout les deux avec un air sadique.</p>
                     </div>
                     <button class="choice" onclick="choice6_7()">Tirer sur la créature</button>
@@ -134,10 +134,10 @@
                 <div id="part7" style="display: none;">
                     <div class="text">
                         <h2>L'assaut</h2>
-                        <p>La bête grogne et saute dans votre direction ! Vous et votre coéquipier avez le temps de lui tirer dessus à plusieurs reprises.</p><br>
-                        <p>-"Continue <span class="nameGame"></span>, CONTINUE !"</p><br>
+                        <p>La bête grogne et saute dans votre direction ! Vous avez le temps de lui tirer dessus à plusieurs reprises.</p><br>
+                        <p>-"Continue PLAYERNAME, CONTINUE !"</p><br>
                         <p>Après plusieurs coups de feu, la créature s'effondre au milieu de la chambre dans un dernier grognement.</p><br>
-                        <p>-"C'était quoi ça bordel ?? C'est qui ce Léonard ? Dans quelles affaires il mouille putin ?? C'est pas de notre ressort cette histoire !"</p><br>
+                        <p>-"C'était quoi ça bordel ?? C'est qui ce mec ? Dans quelles affaires il mouille putin ??"</p><br>
                     </div>
                     <button class="choice" onclick="choice7_8()">Continuer la mission et revenir dans le salon</button>
                     <button class="choice" onclick="choice7_9()">S'enfuir par la fenêtre de la chambre</button>
@@ -147,7 +147,7 @@
                     <div class="text">
                         <h3>FIN 1/7</h3>
                         <p>Lorsque vous reprenez la direction du salon, un homme petit et fin vous fait face dans l'obscurité.</p><br>
-                        <p>Ses yeux verts luisent dans la pénombre, et vous l'entendez simplement susurrer d'un ton glacial :</p>
+                        <p>Ses yeux verts luisent dans la pénombre, et vous l'entendez simplement susurrer d'un ton glacial :</p><br>
                         <p>-"Qu'avez vous fait à ma femme... moldus ?"</p><br>
                         <p>Dans une dernière vision, vous voyez l'homme pointer vers vous une tige en bois et une lumière verte en jaillit.</p>
                     </div>
@@ -158,8 +158,8 @@
                         <h3>FIN 2/7</h3>
                         <p>Vous et Carter passez au travers de la fenêtre sans demander votre reste et courrez en direction de la voiture.</p><br>
                         <p>Vous entrez, démarrez et fuyez ce lieu maudit.</p><br>
-                        <p>Carter n'arrive pas à retrouvé son souffle et semble complètement sous le choc. Il arrive cependant à balbutier :</p>
-                        <p>-"Qu'est ce qu'on va raconter au chef <span class="nameGame"></span> ? Il ne nous croira jamais..."</p><br>
+                        <p>Carter n'arrive pas à retrouver son souffle et semble complètement sous le choc. Il arrive cependant à balbutier :</p>
+                        <p>-"Qu'est ce qu'on va raconter au chef PLAYERNAME ? Il ne nous croira jamais..."</p><br>
                         <p>-"J'ai déjà moi-même du mal à y croire..."</p>
                     </div>
                 </div>
@@ -167,9 +167,9 @@
                 <div id="part10" style="display: none;">
                     <div class="text">
                         <h2>La fuite</h2>
-                        <p>-"Cours <span class="nameGame"></span>! BARRE TOI !"</p><br>
+                        <p>-"Cours PLAYERNAME ! BARRE TOI !"</p><br>
                         <p>La créature grogne et bondit sur vous. Elle vous griffe au bras puis vous projette à travers la fenêtre à l'extérieur de la maison.</p><br>
-                        <p>Vous vous relevez faiblement, à moitié sonné et vous entendez le cri de Carter à l'intérieur de la chambre.</p><br>
+                        <p>Vous vous relevez faiblement, à moitié sonné<span id="girl1">e</span> et vous entendez le cri de Carter à l'intérieur de la chambre.</p><br>
                         <p>Un terrible bruit de craquement d'os s'ensuit et le cri stoppe net.</p>
                     </div>
                     <button class="choice" onclick="choice10_11()">Continuer</button>
@@ -179,20 +179,20 @@
                     <div class="text">
                         <h3>FIN 3/7</h3>
                         <p>Vous voyez la créature dans l'encadrement de la fenêtre.</p><br>
-                        <p>Sa truffe et son torse sont barbouillées de sang. Elle vous murmure quelques mots dans un grognement :</p>
-                        <p>-"Nous allons vite nous revoir <span class="nameGame"></span>".</p><br>
+                        <p>Sa truffe et son torse sont barbouillés de sang. Elle vous murmure quelques mots dans un grognement :</p><br>
+                        <p>-"Nous allons vite nous revoir PLAYERNAME".</p><br>
                         <p>Puis elle disparait dans l'obscurité de la maison.</p><br>
-                        <p>Vous vous effondrez sans voix dans la pelouse du jardin et vous yeux se dirigent vers la pleine lune. D'étranges picotements parcourent le long de votre corps...</p>
+                        <p>Vous vous effondrez sans voix dans la pelouse du jardin. Vos yeux se dirigent vers la pleine lune. Vus commencez à ressentir d'étranges picotements dans votre buste...</p>
                     </div>
                 </div>
 
                 <div id="part12" style="display: none;">
                     <div class="text">
                         <h2>Le couloir</h2>
-                        <p>Vous monter l'escalier discrètement. En haut vous arrivez dans un petit couloir.</p><br>
-                        <p>D'étranges tableaux au style ancien décorent les murs de ce couloir. Vous le distinguer mal dans le noir, mais il vous semble en avoir vu un bouger. Vous sursautez.</p><br>
-                        <p>-"Qu'est ce que t'as vu <span class="nameGame"></span> ?"</p><br>
-                        <p>-"Rien... Rien Carter, juste mon imagination..."</p><br>
+                        <p>Vous montez à l'étage discrètement. En haut, vous débouchez sur un petit couloir.</p><br>
+                        <p>D'étranges tableaux au style ancien décorent les murs de ce couloir. Vous le distinguez mal dans le noir, mais il vous semble en avoir vu un bouger. Vous sursautez.</p><br>
+                        <p>-"Qu'est ce que t'as vu PLAYERNAME ?"</p><br>
+                        <p>-"Rien... rien Carter, juste mon imagination..."</p><br>
                         <p>Vous apercevez une porte au fond du couloir. D'après le plan, il s'agit d'un bureau. Les bruits de pas semblent venir de cette pièce.</p>
                     </div>
                     <button class="choice" onclick="choice12_13()">Entrer dans le bureau</button>
@@ -203,19 +203,20 @@
                     <div class="text">
                         <h2>Le bureau</h2>
                         <p>Vous ouvrez délicatement la porte.</p><br>
-                        <p>Un petit bureau se trouve au fond de la pièce. De nombreux livres jonchent le sol et un homme fait les 100 pas au milieu de la pièce. Il vous tourne le dos.</p>
+                        <p>Un petit bureau se trouve au fond de la pièce. De nombreux livres jonchent le sol et un homme fait les cent pas au milieu de la pièce. Il vous tourne le dos.</p><br>
+                        <p>Il correspond parfaitement à la description du suspect : Léonard.</p>
                     </div>
                     <button class="choice" onclick="choice13_14()">Neutraliser rapidement</button>
-                    <button class="choice" onclick="choice13_15()">Adresser la parole</button>
+                    <button class="choice" onclick="choice13_15()">S'adresser à l'homme</button>
                 </div>
 
                 <div id="part14" class="end" style="display: none;">
                     <div class="text">
                         <h3>FIN 4/7</h3>
                         <p>Vous bondissez sur l'homme et l'assommez instantanément.</p><br>
-                        <p>Il n'a pas le temps de réagir, il s'effondre au sol.</p><br>
-                        <p>-"Bien joué <span class="nameGame"></span> ! Mission accomplie !"</p>
-                        <p>-"Ouais, j'ai pas trop compris toutes les précautions du chef. Il n'a pas l'air si terrible ce Léonard Lestrange..."</p>
+                        <p>Il n'a pas le temps de réagir et s'effondre au sol.</p><br>
+                        <p>-"Impressionnant pour un<span id="girl2">e</span> bleu<span id="girl3">e</span> ! Mission accomplie !"</p><br>
+                        <p>-"Ouais ! J'ai pas trop compris toutes les précautions du chef. Il n'a pas l'air si terrible ce Léonard Lestrange..."</p>
                     </div>
                 </div>
 
@@ -235,9 +236,9 @@
                     <div class="text">
                         <h3>FIN 6/7</h3>
                         <p>Vous bondissez sur l'homme, mais au moment de l'assommer, la vision que vous avez eue en touchant la gemme vous retraverse l'esprit. Votre geste s'arrête net.</p><br>
-                        <p>-"Qu'est ce que tu fous <span class="nameGame"></span> ? NEUTRALISE-LE !!"</p><br>
-                        <p>L'homme se retroune vers vous et ricane. Ces yeux verts luisent et plongent dans les vôtres.</p><br>
-                        <p>-"Il semblerait que notre cher <span class="nameGame"></span> n'ait pas résisté au pouvoir de la gemme..."</p><br>
+                        <p>-"Qu'est ce que tu fous PLAYERNAME ? NEUTRALISE-LE !!"</p><br>
+                        <p>L'homme se retourne vers vous et ricane. Ses yeux verts luisent et plongent dans les vôtres.</p><br>
+                        <p>-"Il semblerait que notre <span id="boy1">cher</span><span id="girl4">chère</span> PLAYERNAME n'ait pas résisté au pouvoir de la gemme..."</p><br>
                         <p>-"Maintenant tue ce moldu, il ne fait plus partie des tiens !"</p>
                     </div>
                 </div>
@@ -246,11 +247,11 @@
                     <div class="text">
                         <h3>FIN 7/7</h3>
                         <p>-"Léonard ! Retourne toi. C'est le FBI !"</p><br>
-                        <p>L'homme se retourne lentement vers vous. Vous pouvez ressentir la terrible aura émane de lui. Est-ce un être humain ?...</p><br>
+                        <p>L'homme se retourne lentement vers vous. Vous pouvez ressentir une terrible aura qui émane de lui. Est-ce un être humain ?...</p><br>
                         <p>Vous ne pouvez pas continuer votre discours.</p><br>
-                        <p>-"Qu'est ce qu'il t'arrive <span class="nameGame"></span> ? BOUGE PAS LEONARD, T'ES EN ETAT D'ARRESTATION. QU'EST CE QUE TU LUI AS FAIT ?"</p><br>
+                        <p>-"Qu'est ce qu'il t'arrive PLAYERNAME ? BOUGE PAS LEONARD, T'ES EN ETAT D'ARRESTATION. QU'EST CE QUE TU LUI AS FAIT ?"</p><br>
                         <p>Léonard s'adresse calmement à Carter avec un ton inquiétant.</p><br>
-                        <p>-"Je crois que ton cher coéquipier a trouvé ma gemme..., n'est ce pas <span class="nameGame"></span> ? Maintenant débarasse nous de lui."</p><br>
+                        <p>-"Je crois que <span id="boy2">ton cher coéquipier</span> <span id="girl5">ta chère coéquipière</span> a trouvé ma gemme..., n'est ce pas PLAYERNAME ? Maintenant débarasse nous de lui."</p><br>
                         <p>Votre main saisit lentement votre arme, puis vous la pointez en direction de Carter. Vous pourriez résister, mais le désir de lui tirer dessus monte en vous.</p><br>
                         <p>-"Oui Maître Lestrange."</p><br>
                         <p>Un coup de feu part.</p>
@@ -266,27 +267,26 @@
                     <source src="Sons/introsong.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
+
                 <audio id="finalSong" controls loop>
                     <source src="Sons/finalsong.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
+
                 <audio id="step" controls>
                     <source src="Sons/escaliers.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
+
                 <audio id="door" controls>
                     <source src="Sons/porte.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
+
                 <audio id="shoot" controls>
                     <source src="Sons/pistolet.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-                <audio id="window" controls>
-                    <source src="Sons/fenêtre.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-
             </div>
         </div>
 
@@ -294,22 +294,43 @@
 
             // Commencer le jeu
 
+            
+            
             function playBoy() {
+              let str = document.getElementById("story").innerHTML;
+              let res = str.replace(/PLAYERNAME/g, document.getElementById("nameP").value);
+
               document.getElementById("intro").style.display = "none";
               document.getElementById("game").style.display = "block";
               document.getElementById("name").innerHTML = document.getElementById("nameP").value;
-              document.getElementById("nameGame").innerHTML = document.getElementById("nameP").value;
+              document.getElementById("story").innerHTML = res;
               introSong.play();
+              introSong.volume = 0.2;
+              document.getElementById("girl1").style.display = "none";
+              document.getElementById("girl2").style.display = "none";
+              document.getElementById("girl3").style.display = "none";
+              document.getElementById("girl4").style.display = "none";
+              document.getElementById("girl5").style.display = "none";
             }
 
             function playGirl() {
+              let str = document.getElementById("story").innerHTML;
+              let res = str.replace(/PLAYERNAME/g, document.getElementById("nameP").value);
+
               document.getElementById("intro").style.display = "none";
               document.getElementById("game").style.display = "block";
               document.getElementById("name").innerHTML = document.getElementById("nameP").value;
-              document.getElementById("nameGame").innerHTML = document.getElementById("nameP").value;
+              document.getElementById("story").innerHTML = res;
               introSong.play();
               document.getElementById("heroBoy").style.display = "none";
               document.getElementById("heroGirl").style.display = "block";
+              document.getElementById("boy1").style.display = "none";
+              document.getElementById("boy2").style.display = "none";
+              document.getElementById("girl1").style.display = "inline";
+              document.getElementById("girl2").style.display = "inline";
+              document.getElementById("girl3").style.display = "inline";
+              document.getElementById("girl4").style.display = "inline";
+              document.getElementById("girl5").style.display = "inline";
             }
 
             // Choix
@@ -331,15 +352,15 @@
 
             function choice2_3() {
                 document.getElementById("part2").style.display = "none";
-                document.getElementById("part3").style.display = "block";
                 door.play();
-                // modifier part 3 par part 3bis si gemme découverte
-            }
 
-            function choice2_3bis() {
-                document.getElementById("part2").style.display = "none";
-                document.getElementById("part3bis").style.display = "block";
-                door.play();
+                if (document.getElementById("gemicon").style.display === "block") {
+                    
+                    document.getElementById("part3bis").style.display = "block";
+                } else {
+
+                    document.getElementById("part3").style.display = "block";
+                }
             }
 
             function choice2_6() {
@@ -433,10 +454,12 @@
                 introSong.pause();
                 finalSong.play();
 
-                if (document.getElementById("gemicon").style.display = "none") {
-                    document.getElementById("part14").style.display = "block";
-                } else {
+                if (document.getElementById("gemicon").style.display === "block") {
+                    
                     document.getElementById("part16").style.display = "block";
+                } else {
+
+                    document.getElementById("part14").style.display = "block";
                 }
             }
 
@@ -446,10 +469,12 @@
                 introSong.pause();
                 finalSong.play();
 
-                if (document.getElementById("gemicon").style.display = "none") {
-                    document.getElementById("part15").style.display = "block";
-                } else {
+                if (document.getElementById("gemicon").style.display === "block") {
+                    
                     document.getElementById("part17").style.display = "block";
+                } else {
+
+                    document.getElementById("part15").style.display = "block";
                 }
             }
         </script>

@@ -8,7 +8,6 @@
 body, html {
     height: 100%;
     background-image: url(Images/reducedHouse.webp);
-    height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -26,32 +25,32 @@ body, html {
 }
 #intro {
     position : absolute;
-    bottom: 5%;
-    left: 12px;
-    font-size: 1.2em;
+    bottom: 7%;
+    left: 30px;
+    font-size: 1.4em;
 }
 h1 {
-    font-size: 3em;
+    font-size: 3.5em;
     margin-bottom: 20px;
-}
-a, a:active, a:visited {
-    text-decoration: none;
-    color: black;
 }
 input, input:focus {
     border: 2px solid #555;
     outline: none;
+    width: 150px;
+}
+.gender {
+    display: inline;
 }
 
 /* caractéristiques */
 .hero {
-    width: 80px;
+    width: 140px;
     float: left;
     margin: 10px 0 0 10px;
     border: solid 2px #555;
 }
 #gemicon {
-    width: 80px;
+    width: 140px;
     float: right;
     margin: 10px 10px 0 0;
     display: none;
@@ -66,13 +65,7 @@ input, input:focus {
     margin: 10px 0 0 10px;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-#magic {
-    float: right;
-    margin: 10px 28px 0 0;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    display: inline;
+    font-size: 1.4em;
 }
 .caractxt::after {
     display: table;
@@ -86,13 +79,11 @@ input, input:focus {
     display: none;
     position: relative;
 }
-
-.story {
+#story {
     position: relative;
-    margin: 20px 10px 10px 10px;
+    margin: 25px 10px 10px 10px;
     z-index: 2;
 }
-
 .text {
     border: 0.5px #555 solid;
     border-radius: 6px;
@@ -103,7 +94,6 @@ input, input:focus {
     background-size: cover;
     background-position: center;
 }
-
 #reStart {
     display: block;
     margin: 20px auto;
@@ -115,21 +105,27 @@ input, input:focus {
     padding: 5px;
     width: 130px;
 }
+a, a:active, a:visited {
+    text-decoration: none;
+}
 h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2em;
 }
 h3 {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 1.2em;
 }
 .end .text {
     border: black solid 2px;
     border-radius: 0;
 }
+
 /* choix */
 .choice {
     width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     text-align: left;
     background-color: black;
     border: gray 1px solid;
@@ -141,4 +137,24 @@ h3 {
 /* sons */
 .song {
     display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #intro, #name {
+        font-size: 1.3em;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .gender {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .hero, #gemicon {
+        width: 80px;
+    }
+    #story {
+        margin: 10px;
+    }
 }
