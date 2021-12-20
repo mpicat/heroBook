@@ -139,23 +139,30 @@ h3 {
     display: none;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
     #intro, #name {
         font-size: 1.3em;
     }
+    #intro {
+        bottom: 3%;
+    }
     h1 {
         font-size: 2.5em;
+        text-align: center;
     }
     .gender {
-        margin-top: 20px;
+        margin: 20px;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+    }
+    .gender button {
+        margin: 5px;
     }
     .hero, #gemicon {
         width: 80px;
     }
     #story {
         margin: 10px;
-        font-size: 0.8em;
+        font-size: 0.9em;
     }
 }
