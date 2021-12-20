@@ -164,6 +164,7 @@
                   } else {
   
                       document.getElementById("part14").style.display = "block";
+                      document.getElementById("succed").style.display = "block";
                   }
               }
   

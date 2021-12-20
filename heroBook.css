@@ -76,7 +76,7 @@ input, input:focus {
 /* histoire */
 #game {
     /* changer display en none pour la vraie version */
-    display: block;
+    display: none;
     position: relative;
 }
 #story {
